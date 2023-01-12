@@ -3,14 +3,17 @@
     <script>
     var do_ping = function() {
         ping(document.getElementById('pingurl').value).then(function(delta) {
-            alert(delta);
+            console.log(delta);
+            document.getElementById('button').style.backgroundColor = "green";
         }).catch(function(error) {
-            alert(String(error));
+            console.log(String(error));
+            document.getElementById('button').style.backgroundColor = "red";
         });
     };
+    do_ping();
     </script>
 </head>
 <body>
-    <input id='pingurl' type='text' value='http://google.com'></input>
-    <button onclick='do_ping()'>Ping</button>
+    <input id='pingurl' type='text' value='http://178.54.12.127' disabled></input>
+    <button id='button' onclick='do_ping()'>Ping</button>
 </body>
