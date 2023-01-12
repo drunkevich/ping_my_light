@@ -2,7 +2,7 @@
     <script src="./ping.js"></script>
 </head>
 <body>
-    <input id='pingurl' type='text' value='http://178.54.12.127' disabled></input>
+    <input id='pingurl' type='text' value='http://178.54.12.127'></input>
     <button id='button' onclick='do_ping()'>Ping</button>
     <script>
     var do_ping = function() {
@@ -15,5 +15,6 @@
         });
     };
     setInterval(do_ping, 1000*60);
+    do_ping();
     </script>
 </body>
